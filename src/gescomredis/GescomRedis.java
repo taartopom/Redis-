@@ -33,14 +33,15 @@ public class GescomRedis {
     // manipulation des lites
 /*----------------------------------------------------------------------*/
     //création de la liste et son initialisation   
-    jedis.rpush("maListe", "premier","deuxieme", "troisieme");
+    //jedis.rpush("maListe", "premier","deuxieme", "troisieme");
     
     //parcours de la liste
     List<String> valeurList = jedis.lrange("maListe", 0, -1);
-    
+
     for(String val :valeurList){
         System.out.println(val);
+    }
         
     }
-    }
+    
 }
